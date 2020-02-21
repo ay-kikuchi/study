@@ -1,4 +1,4 @@
-package com.example.nyumon.practice;
+package com.example.nyumon.practice.rpg;
 
 public class PoisonMatango extends Matango {
     private int poisonAttackTimes = 5;

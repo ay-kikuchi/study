@@ -1,4 +1,4 @@
-package com.example.nyumon.practice;
+package com.example.nyumon.practice.rpg;
 
 public class Hero {
     String name;
