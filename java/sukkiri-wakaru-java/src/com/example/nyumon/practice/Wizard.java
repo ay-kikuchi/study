@@ -1,4 +1,4 @@
-package com.example.nyumon.chap10;
+package com.example.nyumon.practice;
 
 public class Wizard {
     private int hp;
