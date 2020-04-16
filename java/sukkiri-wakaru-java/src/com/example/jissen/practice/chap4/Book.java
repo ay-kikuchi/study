@@ -23,21 +23,20 @@ public class Book implements Comparable<Book>, Cloneable {
         if (o == this) return true;
         if (o == null) return false;
         if (!(o instanceof Book)) return false;
-        var b = (Book) o;
+
         // 書名と発行日が同じならばtrue
-        if (this.title.equals(b.title) && this.publishDate.equals(this.publishDate)) {
-            return true;
-        }
-        return false;
+        var b = (Book) o;
+        return this.title.equals(b.title) && this.publishDate.equals(b.publishDate);
     }
 
     public int hashCode() {
         int result = 37;
         result = result * 31 + title.hashCode();
-        result + result * 31 + hp;
+        result = result * 31 + publishDate.hashCode();
+        result = result * 31 + comment.hashCode();
         return result;
     }
-    
+
     @Override
     public int compareTo(Book o) {
         return this.publishDate.compareTo(o.publishDate);
@@ -48,5 +47,6 @@ public class Book implements Comparable<Book>, Cloneable {
         newBook.title = this.title;
         newBook.publishDate = (Date) this.publishDate.clone();
         newBook.comment = this.comment;
+        return newBook;
     }
 }
